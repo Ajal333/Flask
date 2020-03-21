@@ -2,12 +2,18 @@
 <html>
     <head>
         <title>
-            {{ username }} - Profile
+            {{ name }} - Profile
         </title>
+        <link rel='stylesheet' href="{{url_for('static', filename='style.css')}}">
     </head>
-    <body>
-        {% if username %}
-            <h1>Hello, {{ username }}</h1>
+    <body class="body-color">
+        {% if name %}
+            <h1>Hello, {{ name }}</h1>
+            <br>
+        {% if college %}
+            <h1>I hope you are studying in {{college}}.</h1>
+        {%else %}
+        {% endif %}
         {% else %}
             <h1>Hello, there!</h1>
         {% endif %}    

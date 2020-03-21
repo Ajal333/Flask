@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+    <title>Login</title>
+    <link rel='stylesheet' href="{{url_for('static', filename='style.css')}}">
+</head>
+<body class="body-color">
+    <h1> Log-In Here </h1>
+    <form action="/login" method="POST">
+        Name: <input type="text" name="name">
+        College: <input type="text" name="college">
+        <button type="submit">Sign-In</button>
+    </form>
+</body>
