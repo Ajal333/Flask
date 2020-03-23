@@ -22,8 +22,9 @@ def login() :
     if request.method == 'POST' :
         name = request.form['name']
         college = request.form['college']
-        return render_template('profile.html',name = name, college= college)
+        native = request.form['native']
+        return render_template('profile.html',name = name, college= college,native=native)
     return render_template('login.html')
 
 if __name__ == '__main__' :
-    app.run()
+    app.run(debug=True)

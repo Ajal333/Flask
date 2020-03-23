@@ -6,14 +6,17 @@
         </title>
         <link rel='stylesheet' href="{{url_for('static', filename='style.css')}}">
     </head>
-    <body class="body-color">
+    <bod[y class="body-color">
         {% if name %}
-            <h1>Hello, {{ name }}</h1>
-            <br>
+            <h1>Name:  {{ name }}</h1>
         {% if college %}
-            <h1>I hope you are studying in {{college}}.</h1>
+            <h1>College:  {{college}}.</h1>
         {%else %}
         {% endif %}
+        {% if native %}
+            <h1>Place: {{native}}</h1>
+        {%else%}
+        {%endif%}
         {% else %}
             <h1>Hello, there!</h1>
         {% endif %}    
